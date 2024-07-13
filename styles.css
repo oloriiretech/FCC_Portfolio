@@ -6,47 +6,56 @@
     --color-lightness-blue: #0077B0;
     --color-pink: #FF7EE2;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 a {
     text-decoration: none;
-    color: var(--color-white); 
+    color: var(--color-white);
 }
+
 #nav-bar {
-background-color: var(--color-ruby);
-text-align: right;
-border: 30px solid var(--color-ruby);
-font-size: 25px;
-position: fixed;
-width: 100%;
+    background-color: var(--color-ruby);
+    text-align: right;
+    border: 30px solid var(--color-ruby);
+    font-size: 25px;
+    position: fixed;
+    width: 100%;
 }
+
 .nav-link {
-margin-right: 10px;
+    margin-right: 10px;
 }
+
 .nav-link:hover {
-  background-color: var(--color-blue);
-   color: var(--color-white);
-   border: 30px solid var(--color-blue);
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: 30px solid var(--color-blue);
 }
+
 #welcome-section {
     background-color: var(--color-black);
     text-align: center;
     border: 200px solid;
     padding-bottom: 150px;
 }
+
 #mimic {
-    color:var(--color-white);
+    color: var(--color-white);
     font-size: 50px;
 }
+
 #developer {
     color: var(--color-ruby);
     font-style: italic;
     font-size: 30px;
 }
+
 #my_projects {
     text-align: center;
     text-decoration: underline;
@@ -54,85 +63,110 @@ margin-right: 10px;
     font-size: 40px;
     font-weight: bold;
     color: var(--color-white);
-   }
+}
 #projects {
     background-color: var(--color-lightness-blue);
     padding: 100px 20px 100px 20px;
     border: solid var(--color-black);
-border-top: 120px;
-border-bottom: 150px;
-     }
+    border-top: 120px;
+    border-bottom: 150px;
+}
 .project-tile {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
 }
 .grid-item {
     border: 2px solid var(--color-black);
-    width: 95%;   
     height: 300px;
     margin-right: 20px;
     margin-bottom: 40px;
     text-align: center;
-    padding: 100px;
+    background-color: var(--color-blue);
 }
-.grid-item > a:hover {
+.grid-item img {
+    width: 100%;
+    height: 80%;
+}
+.grid-item>a:hover, h3:hover {
     background-color: var(--color-ruby);
+}
+h3 {
+    padding: 17px;
 }
 #show-all {
     text-align: center;
-    margin: 100px;
-    border:solid var(--color-blue);
+    margin: auto;
     background-color: var(--color-blue);
     padding: 20px;
     font-size: 20px;
-    }
+    width: 200px;
+}
+
+#show-all:hover {
+    background-color: var(--color-ruby);
+}
+
 .work {
-   background-color: var(--color-blue);
+    background-color: var(--color-blue);
     border: 200px solid var(--color-blue);
     padding-bottom: 150px;
-   }
+}
+
 #togetherness {
     text-align: center;
     font-size: 50px;
     color: var(--color-white);
 }
+
 #coffee {
     text-align: center;
     font-style: italic;
     color: var(--color-white);
     margin-top: 10px;
 }
+
 .web-link {
-text-align: center;
-margin-top: 30px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
 }
-.web-link > a {
+
+.web-link>a {
     margin-right: 10px;
 }
-.web-link > a:hover {
+
+.web-link>a:hover {
     color: var(--color-ruby);
 }
+
 hr {
-   border: 3px solid var(--color-ruby);
+    border: 3px solid var(--color-ruby);
 }
+
 footer {
     background-color: var(--color-blue);
     border: 50px solid var(--color-blue);
     text-align: center;
-    }
-footer > i {
-        margin-left: 100px;
-    }
- footer > a:hover {
+    color: var(--color-white);
+}
+
+footer>i {
+    margin-left: 100px;
+}
+
+footer>a:hover {
     color: var(--color-ruby)
- }
- @media screen and (min-width:100px) {
+}
+
+@media screen and (min-width:100px) {
     body {
         background-color: var(--color-pink);
         color: var(--color-black);
     }
-nav {
-    background-color: var(--color-blue);
-    color: var(--color-white);
+
+    nav {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+    }
 }
- }
