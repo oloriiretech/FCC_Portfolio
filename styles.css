@@ -24,7 +24,6 @@ a {
     text-align: right;
     border: 30px solid var(--color-ruby);
     font-size: 25px;
-    position: fixed;
     width: 100%;
 }
 
@@ -64,6 +63,7 @@ a {
     font-weight: bold;
     color: var(--color-white);
 }
+
 #projects {
     background-color: var(--color-lightness-blue);
     padding: 100px 20px 100px 20px;
@@ -71,11 +71,13 @@ a {
     border-top: 120px;
     border-bottom: 150px;
 }
+
 .project-tile {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
 }
+
 .grid-item {
     border: 2px solid var(--color-black);
     height: 300px;
@@ -84,16 +86,21 @@ a {
     text-align: center;
     background-color: var(--color-blue);
 }
+
 .grid-item img {
     width: 100%;
     height: 80%;
 }
-.grid-item>a:hover, h3:hover {
+
+.grid-item>a:hover,
+h3:hover {
     background-color: var(--color-ruby);
 }
+
 h3 {
     padding: 17px;
 }
+
 #show-all {
     text-align: center;
     margin: auto;
@@ -159,14 +166,234 @@ footer>a:hover {
     color: var(--color-ruby)
 }
 
-@media screen and (min-width:100px) {
-    body {
-        background-color: var(--color-pink);
-        color: var(--color-black);
+/* Small screens (phones in portrait mode) */
+@media only screen and (max-width: 600px) {
+    #nav-bar {
+        font-size: 18px;
+        text-align: center;
     }
 
-    nav {
-        background-color: var(--color-blue);
-        color: var(--color-white);
+    .nav-link {
+        margin-right: 5px;
+    }
+
+    #welcome-section {
+        padding-bottom: 100px;
+        border: 100px solid;
+    }
+
+    #mimic {
+        font-size: 35px;
+    }
+
+    #developer {
+        font-size: 20px;
+    }
+
+    #my_projects {
+        font-size: 30px;
+    }
+
+    #projects {
+        padding: 50px 10px;
+        border-top: 60px;
+        border-bottom: 80px;
+    }
+
+    .project-tile {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        height: 250px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #show-all {
+        font-size: 18px;
+        width: 160px;
+    }
+
+    #show-all:hover {
+        font-size: 18px;
+    }
+
+    .work {
+        padding-bottom: 100px;
+    }
+
+    #togetherness {
+        font-size: 35px;
+    }
+
+    #coffee {
+        font-size: 18px;
+    }
+
+    .web-link {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+/* Medium screens (tablets in portrait mode or small laptops) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #nav-bar {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #welcome-section {
+        padding-bottom: 120px;
+        border: 150px solid;
+    }
+
+    #mimic {
+        font-size: 40px;
+    }
+
+    #developer {
+        font-size: 25px;
+    }
+
+    #my_projects {
+        font-size: 35px;
+    }
+
+    #projects {
+        padding: 80px 20px;
+        border-top: 90px;
+        border-bottom: 110px;
+    }
+
+    .project-tile {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-item {
+        height: 280px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    #show-all {
+        font-size: 18px;
+        width: 180px;
+    }
+
+    #show-all:hover {
+        font-size: 18px;
+    }
+
+    .work {
+        padding-bottom: 120px;
+    }
+
+    #togetherness {
+        font-size: 45px;
+    }
+
+    #coffee {
+        font-size: 20px;
+    }
+
+    .web-link {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 18px;
+        padding: 30px;
+    }
+}
+
+/* Large screens (laptops and desktops) */
+@media only screen and (min-width: 1025px) {
+    #nav-bar {
+        font-size: 25px;
+        text-align: right;
+    }
+
+    #welcome-section {
+        padding-bottom: 150px;
+        border: 200px solid;
+    }
+
+    #mimic {
+        font-size: 50px;
+    }
+
+    #developer {
+        font-size: 30px;
+    }
+
+    #my_projects {
+        font-size: 40px;
+    }
+
+    #projects {
+        padding: 100px 20px;
+        border-top: 120px;
+        border-bottom: 150px;
+    }
+
+    .project-tile {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-item {
+        height: 300px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        font-size: 22px;
+        padding: 17px;
+    }
+
+    #show-all {
+        font-size: 20px;
+        width: 200px;
+    }
+
+    #show-all:hover {
+        font-size: 20px;
+    }
+
+    .work {
+        padding-bottom: 150px;
+    }
+
+    #togetherness {
+        font-size: 50px;
+    }
+
+    #coffee {
+        font-size: 22px;
+    }
+
+    .web-link {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 20px;
+        padding: 50px;
     }
 }
