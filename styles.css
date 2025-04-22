@@ -11,7 +11,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-white);
 }
 
 a {
@@ -22,92 +26,97 @@ a {
 #nav-bar {
     background-color: var(--color-ruby);
     text-align: right;
-    border: 30px solid var(--color-ruby);
-    font-size: 25px;
-    width: 100%;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-link {
-    margin-right: 10px;
+    margin-left: 15px;
 }
 
 .nav-link:hover {
     background-color: var(--color-blue);
-    color: var(--color-white);
-    border: 30px solid var(--color-blue);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #welcome-section {
     background-color: var(--color-black);
     text-align: center;
-    border: 200px solid;
-    padding-bottom: 150px;
+    padding: 100px 20px;
 }
 
 #mimic {
     color: var(--color-white);
-    font-size: 50px;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 #developer {
     color: var(--color-ruby);
     font-style: italic;
-    font-size: 30px;
-}
-
-#my_projects {
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 50px;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--color-white);
+    font-size: 1.8rem;
 }
 
 #projects {
     background-color: var(--color-lightness-blue);
-    padding: 100px 20px 100px 20px;
-    border: solid var(--color-black);
-    border-top: 120px;
-    border-bottom: 150px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#my_projects {
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 50px;
+    text-decoration: underline;
 }
 
 .project-tile {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .grid-item {
+    background-color: var(--color-blue);
     border: 2px solid var(--color-black);
     height: 300px;
-    margin-right: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-    background-color: var(--color-blue);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .grid-item img {
     width: 100%;
     height: 80%;
+    object-fit: cover;
 }
 
-.grid-item>a:hover,
+.grid-item h3 {
+    color: var(--color-white);
+    padding: 10px;
+}
+
+.grid-item a:hover,
 h3:hover {
     background-color: var(--color-ruby);
-}
-
-h3 {
-    padding: 17px;
+    transition: background 0.3s;
 }
 
 #show-all {
-    text-align: center;
-    margin: auto;
+    margin: 40px auto 0;
     background-color: var(--color-blue);
-    padding: 20px;
-    font-size: 20px;
-    width: 200px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: fit-content;
+    color: var(--color-white);
+    border-radius: 5px;
 }
 
 #show-all:hover {
@@ -116,284 +125,97 @@ h3 {
 
 .work {
     background-color: var(--color-blue);
-    border: 200px solid var(--color-blue);
-    padding-bottom: 150px;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 #togetherness {
-    text-align: center;
-    font-size: 50px;
+    font-size: 2.5rem;
     color: var(--color-white);
+    margin-bottom: 10px;
 }
 
 #coffee {
-    text-align: center;
     font-style: italic;
     color: var(--color-white);
-    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 .web-link {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1rem;
 }
 
-.web-link>a {
-    margin-right: 10px;
-}
-
-.web-link>a:hover {
-    color: var(--color-ruby);
+.web-link a:hover {
+    color: var(--color-pink);
+    transition: color 0.3s ease;
 }
 
 hr {
-    border: 3px solid var(--color-ruby);
+    border: none;
+    height: 4px;
+    background-color: var(--color-ruby);
+    margin: 0;
 }
 
 footer {
     background-color: var(--color-blue);
-    border: 50px solid var(--color-blue);
+    padding: 30px 20px;
     text-align: center;
     color: var(--color-white);
+    font-size: 0.95rem;
 }
 
-footer>i {
-    margin-left: 100px;
+footer a:hover {
+    color: var(--color-ruby);
+    transition: color 0.3s ease;
 }
 
-footer>a:hover {
-    color: var(--color-ruby)
-}
-
-/* Small screens (phones in portrait mode) */
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
     #nav-bar {
-        font-size: 18px;
+        font-size: 1rem;
         text-align: center;
+        padding: 10px;
     }
 
     .nav-link {
-        margin-right: 5px;
-    }
-
-    #welcome-section {
-        padding-bottom: 100px;
-        border: 100px solid;
+        display: inline-block;
+        margin: 5px 10px;
     }
 
     #mimic {
-        font-size: 35px;
+        font-size: 2.2rem;
     }
 
     #developer {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
     #my_projects {
-        font-size: 30px;
-    }
-
-    #projects {
-        padding: 50px 10px;
-        border-top: 60px;
-        border-bottom: 80px;
-    }
-
-    .project-tile {
-        grid-template-columns: 1fr;
+        font-size: 1.5rem;
     }
 
     .grid-item {
         height: 250px;
-        margin-right: 10px;
-        margin-bottom: 20px;
-    }
-
-    h3 {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    #show-all {
-        font-size: 18px;
-        width: 160px;
-    }
-
-    #show-all:hover {
-        font-size: 18px;
-    }
-
-    .work {
-        padding-bottom: 100px;
     }
 
     #togetherness {
-        font-size: 35px;
+        font-size: 2rem;
     }
 
     #coffee {
-        font-size: 18px;
+        font-size: 1rem;
     }
 
     .web-link {
-        font-size: 16px;
+        font-size: 0.95rem;
     }
 
     footer {
-        font-size: 16px;
-        padding: 20px;
-    }
-}
-
-/* Medium screens (tablets in portrait mode or small laptops) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    #nav-bar {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #welcome-section {
-        padding-bottom: 120px;
-        border: 150px solid;
-    }
-
-    #mimic {
-        font-size: 40px;
-    }
-
-    #developer {
-        font-size: 25px;
-    }
-
-    #my_projects {
-        font-size: 35px;
-    }
-
-    #projects {
-        padding: 80px 20px;
-        border-top: 90px;
-        border-bottom: 110px;
-    }
-
-    .project-tile {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .grid-item {
-        height: 280px;
-        margin-right: 15px;
-        margin-bottom: 30px;
-    }
-
-    h3 {
-        font-size: 20px;
-        padding: 12px;
-    }
-
-    #show-all {
-        font-size: 18px;
-        width: 180px;
-    }
-
-    #show-all:hover {
-        font-size: 18px;
-    }
-
-    .work {
-        padding-bottom: 120px;
-    }
-
-    #togetherness {
-        font-size: 45px;
-    }
-
-    #coffee {
-        font-size: 20px;
-    }
-
-    .web-link {
-        font-size: 18px;
-    }
-
-    footer {
-        font-size: 18px;
-        padding: 30px;
-    }
-}
-
-/* Large screens (laptops and desktops) */
-@media only screen and (min-width: 1025px) {
-    #nav-bar {
-        font-size: 25px;
-        text-align: right;
-    }
-
-    #welcome-section {
-        padding-bottom: 150px;
-        border: 200px solid;
-    }
-
-    #mimic {
-        font-size: 50px;
-    }
-
-    #developer {
-        font-size: 30px;
-    }
-
-    #my_projects {
-        font-size: 40px;
-    }
-
-    #projects {
-        padding: 100px 20px;
-        border-top: 120px;
-        border-bottom: 150px;
-    }
-
-    .project-tile {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .grid-item {
-        height: 300px;
-        margin-right: 20px;
-        margin-bottom: 40px;
-    }
-
-    h3 {
-        font-size: 22px;
-        padding: 17px;
-    }
-
-    #show-all {
-        font-size: 20px;
-        width: 200px;
-    }
-
-    #show-all:hover {
-        font-size: 20px;
-    }
-
-    .work {
-        padding-bottom: 150px;
-    }
-
-    #togetherness {
-        font-size: 50px;
-    }
-
-    #coffee {
-        font-size: 22px;
-    }
-
-    .web-link {
-        font-size: 20px;
-    }
-
-    footer {
-        font-size: 20px;
-        padding: 50px;
+        font-size: 0.85rem;
     }
 }
